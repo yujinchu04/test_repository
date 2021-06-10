@@ -1,13 +1,13 @@
-import numpy as np
-import matplotlib.pyplot as plt
+import numpy as np # 넘파이
+import matplotlib.pyplot as plt # 그래프 그리는 라이브러리
 
 # 학습 데이터를 읽어들인다
-train = np.loadtxt('images1.csv', delimiter=',', skiprows=1)
+train = np.loadtxt('images1.csv', delimiter=',', skiprows=1) #image1.csv 파일 need
 train_x = train[:,0:2]
 train_y = train[:,2]
 
 # 웨이트를 초기화한다
-w = np.random.rand(2)
+w = np.random.rand(2) # 랜심시드를 2로 맞춰놓음 -> 결과 일정함.
 
 # 식별함수
 def f(x):
@@ -30,7 +30,7 @@ for _ in range(epoch):
 
     # 로그를 출력한다
     count += 1
-    print('{}회째: w = {}'.format(count, w))
+    print('{}회째: w = {}'.format(count, w)) #epoch 
 
 # 그래프로 나타내서 확인한다
 x1 = np.arange(0, 500)
